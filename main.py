@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template, redirect, url_for, request
 from flask_apscheduler import APScheduler
 from flask_sqlalchemy import SQLAlchemy
@@ -7,7 +9,7 @@ from news_parser import launch
 from forms import Newsform
 
 app = Flask(__name__)
-app.config['DATABASE_URL'] = 'postgres://postgres:19734682@localhost/dummy'
+app.config['DATABASE_URL'] = os.environ.get("DATABASE_URL")
 app.secret_key = "ghfs8119hffd91jr10rhf810"
 scheduler = APScheduler()
 
