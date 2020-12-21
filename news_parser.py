@@ -37,7 +37,6 @@ def check_database(news_list):
         return checker
 
 
-
 def save(news_list):
     with open('news.txt', 'w', encoding='utf-8') as fout:
         for item in news_list:

@@ -12,4 +12,15 @@
         </div>
     {% endfor %}
 </div>
+<hr>
+<div class="row">
+    {% for i in user_news %}
+        <div class="col-12" style="padding-top: 20px">
+            <strong> {{ i.header }}</strong>
+            <p> {{ i.body }}</p>
+            <p style="font-size: smaller">{{ i.date }}</p>
+    {% endfor %}
+</div>
+
+
 {% endblock %}

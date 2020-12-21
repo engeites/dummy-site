@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div id="LoginForm">
+<div class="container">
+<div class="login-form">
+<div class="main-divv">
+    <div class="panel">
+   <h2>Добавление новости</h2>
+   <p>Пожалуйста, опишите новость как можно подробнее и придумайте заголовок</p>
+   </div>
+    <form id="Login" method="post" action="">
+        {{ form.hidden_tag() }}
+        <div class="form-group flex-fill">
+            {{ form.header(class='form-control', placeholder="Заголовок") }}
+        </div>
+
+        <div class="form-group flex-fill">
+            {{ form.body(class='form-control', placeholder='Текст') }}
+        </div>
+
+        <div class="form-group flex-fill">
+            {{ form.submit(class="btn btn-primary", placeholder="Добавить") }}
+        </div>
+    </form>
+    </div>
+</div></div></div>
+{% endblock %}
