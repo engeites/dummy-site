@@ -9,7 +9,8 @@ from news_parser import launch
 from forms import Newsform
 
 app = Flask(__name__)
-app.config['DATABASE_URL'] = os.environ.get("DATABASE_URL")
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:19734682@localhost/dummy'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 app.secret_key = "ghfs8119hffd91jr10rhf810"
 scheduler = APScheduler()
 
