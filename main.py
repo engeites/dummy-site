@@ -15,4 +15,4 @@ def index():
 if __name__ == '__main__':
     scheduler.add_job(id='Get news', func=launch, trigger='interval', seconds=3600)
     scheduler.start()
-    app.run(debug=True)
+    app.run(debug=False)
