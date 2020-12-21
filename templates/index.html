@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h2>Новости Туркменского района на данный момент:</h2>
+
+<div class='row'>
+    {% for i in news %}
+        <div class="col-12" style="padding-top: 20px">
+            <strong> {{ i[1] }}</strong>
+            <p> {{ i[2] }}</p>
+            <p style="font-size: smaller">{{ i[0] }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
